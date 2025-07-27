@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 3: Keep Guessing</title>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <h3>Task 3: Keep Guessing</h3>
+  <input type="number" id="guess1" placeholder="Enter a number">
+  <button onclick="checkGuess(guess1.value, 75, 'result1')">Submit</button>
+  <p id="result1"></p>
+
+  <!-- Section 2 -->
+  <h3>Task 3: Keep Guessing</h3>
+  <input type="number" id="guess2" placeholder="Enter a number">
+  <button onclick="checkGuess(guess2.value, 75, 'result2')">Submit</button>
+  <p id="result2"></p>
+
+  <!-- Section 3 -->
+  <h3>Task 3: Keep Guessing</h3>
+  <input type="number" id="guess3" placeholder="Enter a number">
+  <button onclick="checkGuess(guess3.value, 75, 'result3')">Submit</button>
+  <p id="result3"></p>
+
+  <script>
+    function checkGuess(userGuess, correctNumber, resultId) {
+      userGuess = parseInt(userGuess);
+      let result = "";
+      if (userGuess < correctNumber) {
+        result = "Too Low";
+      } else if (userGuess > correctNumber) {
+        result = "Too High";
+      } else {
+        result = "Correct!";
+      }
+      document.getElementById(resultId).innerText = result;
+    }
+  </script>
+
+</body>
+</html>
