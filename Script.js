@@ -1,17 +1,13 @@
-function greet(name, callback) {
-  callback("Hi " + name);
+function greet(name) {
+  return "Hi " + name;
 }
+document.getElementById("greet").innerText = greet("Lavanya");
 
-greet("Lavanya", function(msg) {
-  document.getElementById("callbackOutput").innerText = msg;
-});
-
-// Simple scope example
-var a = "Global";
-
-function testScope() {
-  let b = "Local";
-  document.getElementById("scopeOutput").innerText = a + " & " + b;
+function add(...nums) {
+  let total = 0;
+  for (let n of nums) {
+    total += n;
+  }
+  return total;
 }
-
-testScope();
+document.getElementById("sum").innerText = "Sum: " + add(2 , 4 , 6);
