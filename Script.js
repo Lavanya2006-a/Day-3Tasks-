@@ -1,13 +1,12 @@
-function greet(name) {
-  return "Hi " + name;
-}
-document.getElementById("greet").innerText = greet("Lavanya");
+let squareExpr = function(n) {
+  return n * n;
+};
+document.getElementById("squareExpr").innerText = "Square (Expression): " + squareExpr(5);
 
-function add(...nums) {
-  let total = 0;
-  for (let n of nums) {
-    total += n;
-  }
-  return total;
-}
-document.getElementById("sum").innerText = "Sum: " + add(2 , 4 , 6);
+
+let squareArrow = (n) => n * n;
+document.getElementById("squareArrow").innerText = "Square (Arrow): " + squareArrow(3);
+
+
+let multiply = (a, b) => a * b;
+document.getElementById("multiply").innerText = "Multiply: " + multiply(2, 4);
